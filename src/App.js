@@ -52,7 +52,13 @@ function App(){
          <button className="search-button" >Search</button>
        </form>
        {recipes.map(recipe => (
-         <Recipe label={recipe.recipe.label} calories={recipe.recipe.calories} image={recipe.recipe.image} key={recipe.recipe.label}/>
+         <Recipe
+          label={recipe.recipe.label} 
+          calories={recipe.recipe.calories} 
+          image={recipe.recipe.image}
+          key={recipe.recipe.label}
+          ingredients = {recipe.recipe.ingredients}
+           />
        ))}
     </div>
 
