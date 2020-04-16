@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from 'react';
+import Recipe from "./Recipe"
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -36,6 +37,9 @@ function App(){
          <input className="search-bar" type="text" />
          <button className="search-button" >Search</button>
        </form>
+       {recipes.map(recipe => (
+         <Recipe label={recipe.recipe.label} calories={recipe.recipe.calories} image={recipe.recipe.image}/>
+       ))}
     </div>
 
   );
