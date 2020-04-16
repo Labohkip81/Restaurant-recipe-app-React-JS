@@ -7,6 +7,7 @@ const Recipe = ({label,calories,image}) => {
             <h1> {label}</h1>
             <p> {calories} </p>
             <img src={image} alt=""></img>
+            
         </div>
     )
 }
