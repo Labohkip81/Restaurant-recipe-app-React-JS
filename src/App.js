@@ -2,6 +2,9 @@ import React,{useEffect, useState} from 'react';
 import Recipe from "./Recipe"
 import logo from "./logo.svg";
 import "./App.css";
+import { SearchOutlined } from '@ant-design/icons'
+import { Button } from 'antd';
+
 
 
 
@@ -49,7 +52,7 @@ function App(){
     <div className="App">
        <form onSubmit={getSearch} className="search-form">
          <input className="search-bar" type="text" value={search} onChange={updateSearch} />
-         <button className="search-button" >Search</button>
+         <Button type="primary" icon={<SearchOutlined />} >Search</Button>
        </form>
        {recipes.map(recipe => (
          <Recipe

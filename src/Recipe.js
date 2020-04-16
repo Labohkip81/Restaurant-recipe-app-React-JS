@@ -1,12 +1,12 @@
 import React from 'react'
-
+import {Card} from 'antd';
 
 const Recipe = ({label,calories,image, ingredients}) => {
     return(
         <div>
-            <h1> {label}</h1>
+
+            <Card title={label} style={{ width: 400}} cover={<img alt={label} src={image} />}>
             <p> {calories} </p>
-            <img src={image} alt=""></img>
             <h3>These are the ingredients:</h3>
             <ol>
                 {ingredients.map(ingredient =>(
@@ -17,6 +17,12 @@ const Recipe = ({label,calories,image, ingredients}) => {
 
             </ol>
 
+
+
+
+            </Card>
+            
+           
 
         </div>
     )
